@@ -8,8 +8,8 @@ const InputField = ({
   onChange,
   value,
   required = true,
-  minLength = 0,
-  autocomplete = "given-name"
+  minLength,
+  autocomplete = "given-name",
 }) => {
   return (
     <div className="">
@@ -25,7 +25,7 @@ const InputField = ({
           } else if (id === "password") {
             return <FaKey color="#333" className="text-xl" />;
           } else {
-            return null
+            return null;
           }
         })()}
 
@@ -35,7 +35,7 @@ const InputField = ({
           type={type}
           placeholder={placeholder}
           className="w-full py-1 bg-gray-50 text-gray-800 px-2 focus:outline-none"
-          required = {required}
+          required={required}
           value={value}
           onChange={onChange}
           autoComplete={autocomplete}
